@@ -42,9 +42,10 @@ ALTER TABLE Painting ADD FOREIGN KEY (Artist_ID) REFERENCES Artist(Artist_ID);
 
 ALTER TABLE Painting ADD FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID);
 
-CREATE TABLE ExhibitionGalleryR( Artist_ID INT NOT NULL,
+CREATE TABLE ExhibitionGalleryR( Gallery_ID INT NOT NULL,
 								 Ex_ID INT NOT NULL, 
-								 FOREIGN KEY (Artist_ID) REFERENCES Artist(Artist_ID), 
-								 FOREIGN KEY (Ex_ID) REFERENCES Exhibition(Ex_ID));
+								 FOREIGN KEY (Gallery_ID) REFERENCES Gallery(Gallery_ID), 
+								 FOREIGN KEY (Ex_ID) REFERENCES Exhibition(Ex_ID)
+								 PRIMARY KEY (Gallery_ID,Ex_ID) );
 
 
