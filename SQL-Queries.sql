@@ -1,4 +1,4 @@
-CREATE DATABASE IF NOT EXIST Art_Gallery;
+CREATE DATABASE IF NOT EXISTS Art_Gallery;
 
 USE Art_Gallery;
 
