@@ -35,7 +35,9 @@ CREATE table Painting(Painting_ID int AUTO_INCREMENT not null primary key,
 					  Cost int not null, 
 					  Likes int not null);
 
-CREATE table Display(Ex_ID int not null unique, Painting_ID int not null unique);
+CREATE table Display(Ex_ID int not null, 
+		     Painting_ID int not null, 
+		     primary key (Ex_ID,Painting_ID));
 
 ALTER table Gallery add column Artist_ID int not null;
 
